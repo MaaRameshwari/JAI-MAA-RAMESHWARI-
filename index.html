@@ -3,188 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jai Maa Rameshwari Kali Salha</title>
+    <title>Jai Maa Rameshwari Kali Salha | Official Site</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <style>
+        /* नया हल्का और मॉडर्न कलर पैलेट:
+        * Background: #F8F8FF (स्नो-व्हाइट/हल्का प्रीमियम) - बहुत हल्का रंग
+        * Primary/Text: #800020 (वाइन रेड/गहरा मैरून) - शक्ति
+        * Accent: #FFD700 (गोल्ड) - चमक/आकर्षण
+        * Secondary Text: #333333 (ग्रे)
+        */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'Arial', sans-serif; 
+            font-family: 'Montserrat', 'Poppins', sans-serif; 
         }
 
         body {
-            background-color: #000000;
-            color: #FFD700;
+            background-color: #F8F8FF; /* बहुत हल्का प्रीमियम बैकग्राउंड */
+            color: #333333; /* गहरा टेक्स्ट */
             text-align: center;
             line-height: 1.6;
-            box-shadow: inset 0 0 50px rgba(139, 0, 0, 0.5), inset 0 0 30px rgba(255, 215, 0, 0.3);
+            padding-left: 15px; 
+            overflow-x: hidden; 
+            transition: padding-left 0.3s ease; 
         }
-
-        /* हेडर (शीर्ष भाग) */
+        
+        /* **हेडर (शीर्ष भाग) - आकर्षक और हल्का** */
         header {
-            background-color: #8B0000;
+            background: linear-gradient(to right, #800020, #B22222); /* वाइन रेड ग्रेडिएंट */
             padding-bottom: 20px;
-            border-bottom: 8px solid #FFD700; 
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+            border-bottom: 8px solid #FFD700; /* गोल्ड बॉर्डर */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
         .header-image {
             width: 100%;
-            height: 450px;
+            height: 400px; 
             object-fit: cover; 
             display: block;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
+        .header-content {
+            /* लोगो हटने के बाद स्थिर */
+            position: static; 
+            padding-top: 15px;
+        }
+
+        /* .logo CSS नियम हटा दिया गया है */
+
         header h1 {
-            color: #FFD700; 
+            color: #FFFFFF; 
             padding: 15px 0 5px 0;
             font-size: 3.5em; 
-            text-shadow: 3px 3px #000000, 0 0 10px #FF4500; 
+            text-shadow: 2px 2px #000000, 0 0 10px #FFD700; 
         }
 
         header .tagline {
-            color: #F0A0A0; 
+            color: #FFD700; 
             font-size: 1.3em;
         }
 
-        /* **नया सेक्शन: परिचय और इतिहास** */
+        /* **सेक्शन: परिचय और इतिहास** - प्रीमियम लुक** */
         #history-intro {
-            padding: 25px 20px;
-            background-color: #111111; 
-            border-top: 5px solid #FF4500;
-            border-bottom: 5px solid #FF4500;
+            padding: 40px 20px;
+            background-color: #FFFFFF; 
+            border-top: 4px solid #800020;
+            border-bottom: 4px solid #800020;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); 
         }
 
         #history-intro h2 {
-            color: #FFD700;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 5px #8B0000;
+            color: #800020; 
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px #FFD700;
         }
 
         #history-intro .note {
-            max-width: 800px;
-            margin: 15px auto 20px auto;
+            max-width: 900px;
+            margin: 20px auto;
             font-size: 1.2em;
-            color: #FFFFFF;
+            color: #333333;
             border-left: 5px solid #FFD700;
-            padding-left: 15px;
+            padding-left: 20px;
             text-align: justify;
+            background-color: #FAFAD2; 
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         #history-intro .note strong {
-            color: #FF4500;
+            color: #800020;
         }
 
         .details-box {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 15px;
+            gap: 40px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
 
         .detail-item {
-            background-color: #333333;
-            padding: 10px 20px;
+            background-color: #800020;
+            padding: 12px 25px;
             border-radius: 5px;
-            color: #FFD700;
+            color: #FFFFFF;
             font-weight: bold;
-            border: 1px solid #FFD700;
+            border: 2px solid #FFD700;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
 
         .detail-item span {
-            color: #FF4500; 
+            color: #FFD700; 
         }
-        /* **नया सेक्शन: परिचय और इतिहास समाप्त** */
 
+        /* **फ्लोटिंग नोटिस बोर्ड (बाईं ओर, स्लाइडिंग)** */
+        #floating-notice {
+            position: fixed; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            left: -250px; 
+            right: auto;
+            width: 250px; 
+            background-color: rgba(128, 0, 32, 0.95); 
+            border-top: 5px solid #FFD700;
+            border-bottom: 5px solid #FFD700;
+            padding: 10px;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
+            z-index: 1000; 
+            border-radius: 0 5px 5px 0; 
+            text-align: left;
+            transition: all 0.3s ease; 
+        }
+        
+        /* JS द्वारा जोड़ी जाने वाली क्लास, नोटिस को दिखाने के लिए */
+        .show-notice {
+            left: 0 !important; 
+            box-shadow: 8px 0 20px rgba(255, 215, 0, 0.9);
+        }
+        
+        #floating-notice h3 {
+            color: #FFD700;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            text-align: center;
+            text-shadow: 0 0 5px #000000;
+            border-bottom: 2px dashed #FFFFFF; 
+            padding-bottom: 5px;
+        }
 
-        /* माँ काली का मंत्र */
+        #floating-notice ul {
+            list-style: none;
+            padding: 0;
+            max-height: 250px; 
+            overflow-y: auto; 
+        }
+        
+        #floating-notice li {
+            background-color: #A52A2A; 
+            color: #FFFFFF;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border-left: 3px solid #FFD700;
+        }
+
+        #floating-notice li:hover {
+            background-color: #FFD700;
+            color: #800020;
+            font-weight: bold;
+        }
+        
+        /* ओपन नोटिस बटन स्टाइलिंग */
+        #open-notice-btn {
+            position: fixed; 
+            top: 50%; 
+            left: 0; 
+            transform: translateY(-50%); 
+            padding: 10px 15px;
+            background-color: #FFD700;
+            color: #800020;
+            border: 3px solid #800020;
+            border-radius: 0 5px 5px 0;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001; 
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        /* आइकन और टेक्स्ट को पास-पास रखने के लिए */
+        #open-notice-btn i {
+            margin-right: 5px;
+        }
+
+        /* मोबाइल उपकरणों पर नोटिस बोर्ड और ओपन बटन छिपाएँ */
+        @media (max-width: 900px) {
+            #floating-notice, #open-notice-btn {
+                display: none;
+            }
+            body {
+                padding-left: 0 !important; 
+            }
+        }
+        
         .mantra {
-            background-color: #333333; 
-            color: #FFFFFF; 
-            padding: 20px 10px;
+            background-color: #800020; 
+            color: #FFD700; 
+            padding: 30px 10px;
             margin: 0;
             border-top: 5px solid #FFD700;
             border-bottom: 5px solid #FFD700;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
         .mantra p {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #FF4500; 
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #FFD700; 
+            text-shadow: 1px 1px 5px #000;
         }
         
-        /* **वीडियो दर्शन सेक्शन स्टाइलिंग (अब छोटा और आकर्षक)** */
+        /* वीडियो दर्शन सेक्शन स्टाइलिंग */
         #video-darshan-section {
-            padding: 40px 20px;
-            background-color: #0d0d0d;
-            margin: 30px 0;
-            border-top: 5px solid #FF4500;
-            border-bottom: 5px solid #FF4500;
-            box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+            padding: 50px 20px;
+            background-color: #F8F8FF; 
+            margin: 0;
         }
 
         #video-darshan-section h2 {
-            color: #FFD700;
+            color: #800020;
             font-size: 2.5em;
             margin-bottom: 30px;
-            text-shadow: 0 0 10px #FF4500;
+            text-shadow: 1px 1px #FFD700;
         }
 
         .video-container {
-            height: 400px; 
+            height: 450px; 
             width: auto;
-            max-width: 450px; 
+            max-width: 350px; 
             margin: 0 auto;
             position: relative;
             
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            border: 5px solid #FFD700;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 15px rgba(255, 69, 0, 0.8);
+            border: 5px solid #800020;
+            box-shadow: 0 0 25px #800020, 0 0 15px #FFD700;
             background-color: #000;
+            border-radius: 10px;
             overflow: hidden; 
         }
 
         .darshan-video {
             height: 100%; 
-            width: auto; 
-            object-fit: cover;
+            width: 100%; 
+            object-fit: contain; 
             display: block;
         }
         
-        @media (max-width: 768px) {
-            .video-container {
-                height: 350px; 
-            }
-            #history-intro .note {
-                text-align: center;
-                border-left: none;
-                padding-left: 0;
-            }
-        }
-        /* **वीडियो दर्शन सेक्शन स्टाइलिंग समाप्त** */
-
-        /* आकर्षक सोशल मीडिया सेक्शन स्टाइलिंग */
+        /* सोशल मीडिया सेक्शन स्टाइलिंग */
         #social-join {
             padding: 40px 20px;
-            background-color: #1a1a1a; 
-            border-top: 4px double #FFD700; 
-            border-bottom: 4px double #FFD700;
+            background-color: #FFFFFF; 
+            border-top: 4px double #800020; 
+            border-bottom: 4px double #800020;
             margin-top: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
         }
 
         #social-join h2 {
-            color: #FFD700;
-            font-size: 2em;
+            color: #800020;
+            font-size: 2.2em;
             margin-bottom: 30px;
-            text-shadow: 0 0 10px #FF4500; 
-            border-bottom: 3px solid #8B0000;
+            text-shadow: 1px 1px #FFD700; 
+            border-bottom: 3px solid #FFD700;
             display: inline-block;
             padding-bottom: 5px;
         }
@@ -197,58 +297,86 @@
         }
 
         .cool-button {
-            display: inline-block;
+            display: flex; /* Flexbox का उपयोग करें */
+            align-items: center; /* आइकन और टेक्स्ट को बीच में करें */
+            justify-content: center; /* सामग्री को केंद्र में करें */
             padding: 18px 35px; 
-            color: #000000; 
+            color: #FFFFFF; 
             text-decoration: none; 
             font-size: 1.4em; 
             font-weight: 900; 
             letter-spacing: 1px;
             border-radius: 8px;
             
-            box-shadow: 0 4px 0 0 #8B0000, 
-                        0 0 20px rgba(255, 215, 0, 0.9); 
+            /* **3D इफ़ेक्ट के लिए शैडो** */
+            box-shadow: 0 6px 0 0 #A52A2A, 
+                        0 0 15px rgba(255, 215, 0, 0.8); 
             
             transition: all 0.2s ease-in-out;
         }
 
+        /* बटन के अंदर आइकन के लिए स्टाइलिंग */
+        .cool-button i {
+            margin-right: 10px; /* आइकन और टेक्स्ट के बीच थोड़ी दूरी */
+            font-size: 1.2em; /* आइकन को थोड़ा बड़ा करें */
+        }
+
+
         /* Instagram बटन */
         .cool-button.instagram {
-            background: linear-gradient(135deg, #FFD700, #FF4500); 
-            border: 1px solid #FFD700;
+            background: linear-gradient(135deg, #FFD700, #800020); 
+            border: 2px solid #800020;
         }
+        
+        .cool-button.instagram:hover {
+             /* माउस ओवर पर आइकन और टेक्स्ट का रंग बदलें */
+             color: #FFD700;
+        }
+        
+        .cool-button.instagram:hover i {
+             color: #FFFFFF; /* या कोई और अलग रंग */
+        }
+
 
         /* Facebook बटन */
         .cool-button.facebook {
-            background: linear-gradient(135deg, #FF4500, #FFD700);
-            border: 1px solid #FFD700;
+            background: linear-gradient(135deg, #800020, #FFD700);
+            border: 2px solid #800020;
+        }
+        
+         .cool-button.facebook:hover {
+             /* माउस ओवर पर आइकन और टेक्स्ट का रंग बदलें */
+             color: #FFD700;
+        }
+        
+        .cool-button.facebook:hover i {
+             color: #FFFFFF; /* या कोई और अलग रंग */
         }
 
 
         /* माउस ओवर पर (COOL HOVER EFFECT) */
         .cool-button:hover {
-            color: #FFFFFF; 
             transform: translateY(-4px) scale(1.05); 
             
-            box-shadow: 0 8px 0 0 #8B0000, 
-                        0 0 30px #FFD700, 
-                        0 0 15px #FF4500; 
+            box-shadow: 0 10px 0 0 #5C0000, 
+                        0 0 40px #FFD700, 
+                        0 0 20px #800020; 
         }
         
         /* UPCOMING POOJA सेक्शन स्टाइलिंग */
         #upcoming-pooja {
-            padding: 40px 20px;
-            background-color: #0d0d0d; 
-            border-top: 5px solid #8B0000; 
-            border-bottom: 5px solid #8B0000;
+            padding: 50px 20px;
+            background-color: #F8F8FF; 
+            border-top: 5px solid #800020; 
+            border-bottom: 5px solid #800020;
             margin-top: 30px;
         }
 
         #upcoming-pooja h2 {
-            color: #FF4500; 
-            font-size: 2.2em;
+            color: #800020; 
+            font-size: 2.5em;
             margin-bottom: 30px;
-            text-shadow: 0 0 8px #FFD700; 
+            text-shadow: 1px 1px #FFD700; 
         }
 
         .pooja-details {
@@ -256,252 +384,305 @@
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .pooja-item {
-            background-color: #333333; 
+            background-color: #FFFFFF; 
             border: 3px solid #FFD700; 
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 12px;
             width: 100%;
-            max-width: 450px; 
+            max-width: 350px; 
             text-align: left;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
         .pooja-item:hover {
             transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5); 
+            box-shadow: 0 10px 30px rgba(128, 0, 32, 0.3); 
         }
 
         .pooja-item h3 {
-            color: #FFD700; 
-            font-size: 1.6em;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #8B0000;
-            padding-bottom: 5px;
+            color: #800020; 
+            background-color: #FFD700;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 1.8em;
+            text-align: center;
         }
 
         .pooja-item p {
-            color: #FFFFFF; 
-            margin: 8px 0;
-            font-size: 1.1em;
+            color: #333333; 
+            margin: 10px 0;
+            font-size: 1.2em;
         }
 
         .pooja-item strong {
-            color: #FF4500; 
+            color: #800020; 
         }
         
         /* DONATION/PAYMENT सेक्शन स्टाइलिंग */
         #donation-section {
             padding: 40px 20px;
-            background-color: #1a1a1a;
+            background-color: #FFFFFF;
             margin-top: 40px;
-            border-top: 5px double #FFD700;
-            border-bottom: 5px double #FFD700;
+            border-top: 5px double #800020;
+            border-bottom: 5px double #800020;
         }
 
         #donation-section h2 {
-            color: #FFD700;
+            color: #800020;
             font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px #FF4500;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px #FFD700;
         }
 
         #donation-section p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-bottom: 30px;
+            color: #333333;
         }
 
         .payment-box {
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 400px;
+            max-width: 450px;
             margin: 0 auto;
-            background-color: #333333;
-            padding: 30px;
+            background-color: #F8F8FF;
+            padding: 40px;
             border-radius: 15px;
-            border: 5px solid #8B0000;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+            border: 5px solid #800020;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* QR कोड कंटेनर */
         .qr-container {
-            width: 200px;
-            height: 200px;
-            margin: 20px 0;
-            border: 5px solid #000000;
+            width: 250px; 
+            height: 250px; 
+            margin: 20px 0 10px 0; 
+            border: 5px solid #FFD700;
             background-color: #FFFFFF;
             border-radius: 5px;
+            overflow: hidden; 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-
+        
         .qr-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; 
             display: block;
         }
         
-        /* UPI बटन कंटेनर */
         .upi-button-cover {
-            margin-top: 15px;
+            margin-top: 20px;
             display: block;
             position: relative;
             width: 100%;
             max-width: 300px;
         }
 
-        /* UPI ID टेक्स्ट (पूरी तरह से छिपा हुआ) */
         .upi-id {
             display: none;
         }
 
-        /* बटन स्टाइलिंग */
         .upi-button {
-            display: block;
+            display: flex; /* Flexbox का उपयोग करें */
+            align-items: center; /* आइकन और टेक्स्ट को बीच में करें */
+            justify-content: center; /* सामग्री को केंद्र में करें */
             width: 100%;
-            padding: 15px 20px;
-            background-color: #FF4500; 
+            padding: 18px 20px;
+            background-color: #800020; 
             color: #FFFFFF;
-            font-size: 1.4em;
+            font-size: 1.6em;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             border: 3px solid #FFD700;
-            box-shadow: 0 4px 0 #8B0000;
+            box-shadow: 0 5px 0 #5C0000; 
             transition: all 0.2s;
+        }
+        
+         /* UPI बटन के अंदर आइकन के लिए स्टाइलिंग */
+        .upi-button i {
+            margin-right: 10px; 
+            font-size: 1.1em;
         }
 
         .upi-button:hover {
             background-color: #FFD700;
-            color: #000000;
+            color: #800020;
             transform: translateY(-2px);
-            box-shadow: 0 6px 0 #8B0000;
+            box-shadow: 0 8px 0 #5C0000;
         }
         
-        /* मुख्य सामग्री */
+        .upi-button:hover i {
+            color: #800020; /* माउस ओवर पर आइकन का रंग बदलें */
+        }
+        
+        /* मुख्य सामग्री और गैलरी */
         main {
-            padding: 40px 20px;
+            padding: 50px 20px;
+            background-color: #F8F8FF;
         }
 
         .photo-column h2 { 
-            color: #FF4500; 
-            background-color: #1a1a1a; 
-            padding: 10px 30px;
+            color: #FFFFFF; 
+            background-color: #800020; 
+            padding: 15px 40px;
             margin-bottom: 40px;
-            font-size: 2.5em;
-            border: 3px solid #FFD700;
+            font-size: 3em;
+            border: 4px solid #FFD700;
             display: inline-block;
-            box-shadow: 0 0 15px rgba(255, 69, 0, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* फोटो गैलरी */
         .photo-column {
-            max-width: 900px; 
+            max-width: 1100px; 
             margin: 0 auto; 
             display: grid; 
-            grid-template-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
             gap: 40px; 
         }
 
         .photo-column div {
-            background-color: #111111;
-            border: 3px solid #8B0000;
-            padding: 10px;
+            background-color: #FFFFFF;
+            border: 3px solid #FFD700;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .photo-column div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(128, 0, 32, 0.3); 
         }
 
         .photo-column img {
             width: 100%; 
-            height: 400px; 
+            height: 380px; 
             object-fit: cover; 
-            border: 5px solid #FFD700; 
-            box-shadow: 0 0 30px rgba(255, 69, 0, 0.8), 0 0 10px #FFD700; 
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            border: 6px solid #800020; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+            transition: opacity 0.5s ease;
+            border-radius: 3px;
         }
 
         .photo-column img:hover {
-            transform: scale(1.03); 
-            box-shadow: 0 0 40px #FFD700, 0 0 15px #FF4500; 
+            opacity: 0.9;
         }
 
         .photo-column p {
-            color: #000000; 
+            color: #800020; 
             background-color: #FFD700; 
-            padding: 12px;
-            margin-top: 10px; 
+            padding: 15px;
+            margin-top: 15px; 
             font-weight: bold;
             border-radius: 5px;
+            font-size: 1.2em;
         }
 
         /* फ़ूटर (सबसे नीचे) */
         footer {
-            background-color: #000000; 
-            color: #FFD700; 
-            padding: 20px 0;
+            background-color: #800020; 
+            color: #F0F0F0; 
+            padding: 25px 0;
             margin-top: 50px;
-            border-top: 8px solid #8B0000; 
+            border-top: 8px solid #FFD700; 
         }
         
-        /* नया कूल डेवलपर क्रेडिट स्टाइल */
         .navyuvak-credit {
-            color: #FFD700; 
-            font-size: 0.9em;
-            margin-top: 5px;
-            margin-bottom: 3px;
-            text-shadow: 0 0 5px #8B0000;
-            letter-spacing: 1px;
-            font-weight: 500;
+            color: #FFFFFF; 
+            font-size: 1.1em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-shadow: 0 0 5px #FFD700;
         }
 
         .developer-credit {
-            color: #FF4500; 
-            font-size: 0.8em;
+            color: #FFD700; 
+            font-size: 1em;
             margin-top: 5px;
             font-weight: bold;
         }
 
         /* मोबाइल उपकरणों के लिए मीडिया क्वेरी */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .header-image {
-                height: 300px; 
+                height: 250px; 
             }
             header h1 {
                 font-size: 2.5em;
             }
-            .photo-column h2 {
-                font-size: 2em;
+            /* .logo CSS नियम हटा दिया गया है */
+            .video-container {
+                 max-width: 90%; 
+                 height: 350px; 
             }
-            .pooja-item {
-                max-width: 100%;
-            }
-            .photo-column img {
-                height: 300px;
-            }
-            .mantra p {
-                font-size: 1.2em;
-            }
-            .social-buttons {
-                flex-direction: column; 
-                gap: 20px;
+            .photo-column {
+                grid-template-columns: 1fr; 
+                gap: 30px; 
             }
             .cool-button {
-                font-size: 1.2em;
-                padding: 15px 25px;
-                min-width: 80%;
+                font-size: 1.3em;
+                min-width: 90%;
+            }
+            .qr-container {
+                width: 180px; 
+                height: 180px; 
             }
         }
     </style>
 </head>
 <body>
 
+    <button id="open-notice-btn">
+        <i class="fas fa-bell"></i> सूचना
+    </button>
+    
+    <div id="floating-notice">
+        
+        <button id="close-notice-btn" style="
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+            background-color: #FFD700;
+            color: #800020;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2em;
+            line-height: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1002; 
+        ">
+            X
+        </button>
+        
+        <h3><i class="fas fa-exclamation-triangle"></i> मंदिर आवश्यक सूचना <i class="fas fa-exclamation-triangle"></i></h3>
+        <ul>
+            <li>निशा पूजा की तिथि 20/10/2025 है।</li>
+            <li>मंदिर के जीर्णोद्धार हेतु दान की आवश्यकता है।</li>
+            <li>मंदिर में सभी प्रकार के अनुष्ठान के लिए संपर्क करें।</li>
+            <li>नवयुवक संघ द्वारा विशेष सफाई अभियान।</li>
+        </ul>
+    </div>
+
     <header>
         <img src="WhatsApp Image 1947-07-23 at 15.23.45.jpeg" alt="मां रामेश्वरी काली की मुख्य मूर्ति" class="header-image">
-        <h1>जय मां रामेश्वरी काली</h1>
-        <p class="tagline">श्री श्री 108 मां रामेश्वरी काली, सलहा</p>
+        <div class="header-content">
+            <h1>जय मां रामेश्वरी काली</h1>
+            <p class="tagline">श्री श्री 108 मां रामेश्वरी काली, सलहा</p>
+        </div>
     </header>
 
     <section id="history-intro">
@@ -527,7 +708,7 @@
     </div>
 
     <section id="video-darshan-section">
-        <h2>मां के आंगन</h2>
+        <h2>मां के आंगन - सीधा दर्शन</h2>
         <div class="video-container">
             <video class="darshan-video" controls autoplay loop muted playsinline>
                 <source src="WhatsApp Video 1947-07-24 at 03.09.44.mp4" type="video/mp4">
@@ -565,14 +746,14 @@
     </section>
     
     <section id="social-join">
-        <h2>सोशल मीडिया से जुड़ें</h2>
+        <h2>सोशल मीडिया से जुड़ें</h2>
         <div class="social-buttons">
             <a href="https://www.instagram.com/rameshwarikalisalha?igsh=MTl5M2d2djhqZGltZQ==" class="cool-button instagram" target="_blank">
-                📸 Instagram पेज से जुड़ें
+                <i class="fab fa-instagram"></i> Instagram पेज से जुड़ें
             </a>
 
             <a href="https://www.facebook.com/gautam.jha.213519" class="cool-button facebook" target="_blank">
-                👍 Facebook पेज से जुड़ें
+                <i class="fab fa-facebook-f"></i> Facebook पेज से जुड़ें
             </a>
         </div>
     </section>
@@ -587,11 +768,11 @@
             <div class="qr-container">
                 <img src="WhatsApp Image 1947-07-23 at 16.57.49.jpeg" alt="UPI QR Code">
             </div>
-            <p>या</p>
+            <p style="color: #800020; font-weight: bold;">या</p>
             
             <div class="upi-button-cover">
                 <a href="upi://pay?pa=7319864557@ibl&pn=Maa%20Rameshwari%20Kali%20Mandir" class="upi-button" target="_blank">
-                    🙏 क्लिक कर दान करें 🙏
+                    <i class="fas fa-hand-holding-heart"></i> क्लिक कर दान करें
                 </a>
                 
                 <div class="upi-id">
@@ -637,10 +818,10 @@
                 </div>
                 
                 <div>
-                    <img src="WhatsApp Image 1947-07-23 at 15.23.45 copy.jpeg" alt="मंदिर में पूजा करते भक्तगण">
+                    <img src="WhatsApp Image 1947-07-23 at 15.27.42.jpeg" alt="मंदिर में पूजा करते भक्तगण">
                     <p>मंदिर प्रांगण में अनुष्ठान में लीन भक्त।</p>
                 </div>
-
+                
             </div>
         </section>
     </main>
@@ -650,8 +831,46 @@
         
         <p class="navyuvak-credit">युवा शक्ति द्वारा समर्पित (Navyuvak Sangh Salha)</p>
         <p class="developer-credit">Dedicated By Maa Kali Grace (Anonymous Service)</p>
-        <p class="developer-credit">मां के सेवक द्वारा समर्पित 🙏</p>
+        <p class="developer-credit">मां के सेवक द्वारा समर्पित <i class="fas fa-pray"></i></p>
     </footer>
+
+    <script>
+        const floatingNotice = document.getElementById('floating-notice');
+        const openBtn = document.getElementById('open-notice-btn');
+        const closeBtn = document.getElementById('close-notice-btn');
+        const body = document.body;
+        const NOTICE_WIDTH = 250; // नोटिस बोर्ड की चौड़ाई
+
+        function openNotice() {
+            floatingNotice.classList.add('show-notice'); 
+            openBtn.style.display = 'none'; 
+            
+            // बड़ी स्क्रीन (900px से ऊपर) पर, मुख्य सामग्री को खिसकाएँ
+            if (window.innerWidth > 900) {
+                body.style.paddingLeft = `${NOTICE_WIDTH + 15}px`; // 250px + 15px डिफ़ॉल्ट पैडिंग
+            }
+        }
+
+        function closeNotice() {
+            floatingNotice.classList.remove('show-notice'); 
+            openBtn.style.display = 'block'; 
+            body.style.paddingLeft = '15px'; // डिफ़ॉल्ट पैडिंग पर वापस सेट करें
+        }
+
+        // इवेंट लिसनर्स जोड़ें
+        openBtn.addEventListener('click', openNotice);
+        closeBtn.addEventListener('click', closeNotice);
+
+        // Resize इवेंट हैंडलर (स्क्रीन बदलने पर ओपन बटन को छिपाने के लिए)
+        window.addEventListener('resize', () => {
+             if (window.innerWidth <= 900) {
+                 closeNotice(); // मोबाइल पर बंद कर दें
+             } else if (floatingNotice.classList.contains('show-notice')) {
+                 // अगर खुला है और स्क्रीन बड़ी है, तो पैडिंग ठीक करें
+                 body.style.paddingLeft = `${NOTICE_WIDTH + 15}px`; 
+             }
+        });
+    </script>
 
 </body>
 </html>
