@@ -49,12 +49,9 @@
         }
 
         .header-content {
-            /* लोगो हटने के बाद स्थिर */
             position: static; 
             padding-top: 15px;
         }
-
-        /* .logo CSS नियम हटा दिया गया है */
 
         header h1 {
             color: #FFFFFF; 
@@ -68,7 +65,7 @@
             font-size: 1.3em;
         }
 
-        /* **सेक्शन: परिचय और इतिहास** - प्रीमियम लुक** */
+        /* **सेक्शन: परिचय और इतिहास** */
         #history-intro {
             padding: 40px 20px;
             background-color: #FFFFFF; 
@@ -124,12 +121,12 @@
             color: #FFD700; 
         }
 
-        /* **फ्लोटिंग नोटिस बोर्ड (बाईं ओर, स्लाइडिंग)** */
+        /* **फ्लोटिंग नोटिस बोर्ड - सामान्य/डेस्कटॉप स्टाइल (बाएँ से स्लाइड)** */
         #floating-notice {
             position: fixed; 
             top: 50%; 
             transform: translateY(-50%); 
-            left: -250px; 
+            left: -250px; /* छिपी हुई स्थिति */
             right: auto;
             width: 250px; 
             background-color: rgba(128, 0, 32, 0.95); 
@@ -143,7 +140,7 @@
             transition: all 0.3s ease; 
         }
         
-        /* JS द्वारा जोड़ी जाने वाली क्लास, नोटिस को दिखाने के लिए */
+        /* JS द्वारा जोड़ी जाने वाली क्लास, नोटिस को दिखाने के लिए (डेस्कटॉप) */
         .show-notice {
             left: 0 !important; 
             box-shadow: 8px 0 20px rgba(255, 215, 0, 0.9);
@@ -184,7 +181,7 @@
             font-weight: bold;
         }
         
-        /* ओपन नोटिस बटन स्टाइलिंग */
+        /* ओपन नोटिस बटन स्टाइलिंग (डेस्कटॉप के लिए) */
         #open-notice-btn {
             position: fixed; 
             top: 50%; 
@@ -202,18 +199,76 @@
             transition: all 0.3s ease;
         }
         
-        /* आइकन और टेक्स्ट को पास-पास रखने के लिए */
         #open-notice-btn i {
             margin-right: 5px;
         }
 
-        /* मोबाइल उपकरणों पर नोटिस बोर्ड और ओपन बटन छिपाएँ */
+        /* **मोबाइल उपकरणों के लिए मीडिया क्वेरी (900px से कम)** */
         @media (max-width: 900px) {
-            #floating-notice, #open-notice-btn {
-                display: none;
-            }
+            
+            /* डेस्कटॉप पैडिंग हटाएं */
             body {
                 padding-left: 0 !important; 
+            }
+            
+            /* नोटिस बोर्ड को नीचे से ऊपर स्लाइड करने के लिए तैयार करें */
+            #floating-notice {
+                width: 100%; /* पूरी चौड़ाई */
+                height: auto;
+                max-height: 80vh; /* अधिकतम ऊंचाई सेट करें */
+                top: auto; 
+                bottom: -80vh; /* स्क्रीन के नीचे छिपाएँ */
+                left: 0; 
+                transform: none; 
+                border-radius: 8px 8px 0 0; /* केवल ऊपर के कोनों को गोल करें */
+                border-left: none;
+                border-right: none;
+                box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
+            }
+            
+            /* JS द्वारा जोड़ी जाने वाली क्लास (मोबाइल के लिए) */
+            .show-notice {
+                bottom: 0 !important; /* इसे ऊपर स्लाइड करें */
+                left: 0 !important;
+                box-shadow: 0 -8px 20px rgba(255, 215, 0, 0.9);
+            }
+            
+            /* ओपन नोटिस बटन को नीचे दाईं ओर सेट करें */
+            #open-notice-btn {
+                top: auto; 
+                bottom: 20px; 
+                left: auto;
+                right: 20px; /* दाईं ओर फ़्लोट */
+                transform: none; 
+                border-radius: 50px; /* गोल बटन */
+                padding: 15px 20px;
+                font-size: 1.1em;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+                display: block !important; /* सुनिश्चित करें कि यह दिखाई दे */
+            }
+            
+            /* बाकी मोबाइल नियम */
+            .header-image {
+                height: 250px; 
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+             .video-container {
+                 max-width: 90%; 
+                 height: 350px; 
+            }
+            .photo-column {
+                grid-template-columns: 1fr; 
+                gap: 30px; 
+            }
+            .cool-button {
+                font-size: 1.3em;
+                min-width: 90%;
+            }
+            .qr-container {
+                width: 180px; 
+                height: 180px; 
             }
         }
         
@@ -329,12 +384,11 @@
         }
         
         .cool-button.instagram:hover {
-             /* माउस ओवर पर आइकन और टेक्स्ट का रंग बदलें */
              color: #FFD700;
         }
         
         .cool-button.instagram:hover i {
-             color: #FFFFFF; /* या कोई और अलग रंग */
+             color: #FFFFFF; 
         }
 
 
@@ -345,12 +399,11 @@
         }
         
          .cool-button.facebook:hover {
-             /* माउस ओवर पर आइकन और टेक्स्ट का रंग बदलें */
              color: #FFD700;
         }
         
         .cool-button.facebook:hover i {
-             color: #FFFFFF; /* या कोई और अलग रंग */
+             color: #FFFFFF; 
         }
 
 
@@ -611,33 +664,7 @@
             margin-top: 5px;
             font-weight: bold;
         }
-
-        /* मोबाइल उपकरणों के लिए मीडिया क्वेरी */
-        @media (max-width: 900px) {
-            .header-image {
-                height: 250px; 
-            }
-            header h1 {
-                font-size: 2.5em;
-            }
-            /* .logo CSS नियम हटा दिया गया है */
-            .video-container {
-                 max-width: 90%; 
-                 height: 350px; 
-            }
-            .photo-column {
-                grid-template-columns: 1fr; 
-                gap: 30px; 
-            }
-            .cool-button {
-                font-size: 1.3em;
-                min-width: 90%;
-            }
-            .qr-container {
-                width: 180px; 
-                height: 180px; 
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -843,31 +870,60 @@
 
         function openNotice() {
             floatingNotice.classList.add('show-notice'); 
-            openBtn.style.display = 'none'; 
             
-            // बड़ी स्क्रीन (900px से ऊपर) पर, मुख्य सामग्री को खिसकाएँ
+            // केवल डेस्कटॉप (900px से ऊपर) पर ही ओपन बटन छिपाएँ और पैडिंग बदलें
             if (window.innerWidth > 900) {
-                body.style.paddingLeft = `${NOTICE_WIDTH + 15}px`; // 250px + 15px डिफ़ॉल्ट पैडिंग
+                openBtn.style.display = 'none'; 
+                body.style.paddingLeft = `${NOTICE_WIDTH + 15}px`; 
+            } else {
+                 // मोबाइल पर बटन को छिपाएँ, लेकिन पैडिंग नहीं बदलें
+                openBtn.style.display = 'none'; 
             }
         }
 
         function closeNotice() {
             floatingNotice.classList.remove('show-notice'); 
-            openBtn.style.display = 'block'; 
-            body.style.paddingLeft = '15px'; // डिफ़ॉल्ट पैडिंग पर वापस सेट करें
+            
+            // स्क्रीन साइज़ के अनुसार बटन दिखाएँ और पैडिंग ठीक करें
+            if (window.innerWidth > 900) {
+                openBtn.style.display = 'block'; 
+                body.style.paddingLeft = '15px'; // डिफ़ॉल्ट पैडिंग
+            } else {
+                openBtn.style.display = 'block'; 
+                body.style.paddingLeft = '0'; // मोबाइल पर पैडिंग 0 रखें
+            }
         }
 
         // इवेंट लिसनर्स जोड़ें
         openBtn.addEventListener('click', openNotice);
         closeBtn.addEventListener('click', closeNotice);
+        
+        // पेज लोड होने पर सही पैडिंग और बटन स्थिति सुनिश्चित करें
+        window.onload = () => {
+             if (window.innerWidth <= 900) {
+                 // मोबाइल पर डिफ़ॉल्ट रूप से बंद रखें
+                 closeNotice();
+             }
+        };
 
-        // Resize इवेंट हैंडलर (स्क्रीन बदलने पर ओपन बटन को छिपाने के लिए)
+        // Resize इवेंट हैंडलर
         window.addEventListener('resize', () => {
              if (window.innerWidth <= 900) {
-                 closeNotice(); // मोबाइल पर बंद कर दें
-             } else if (floatingNotice.classList.contains('show-notice')) {
-                 // अगर खुला है और स्क्रीन बड़ी है, तो पैडिंग ठीक करें
-                 body.style.paddingLeft = `${NOTICE_WIDTH + 15}px`; 
+                 // मोबाइल साइज़ पर, डेस्कटॉप-स्टाइल पैडिंग हटा दें
+                 body.style.paddingLeft = '0';
+                 // यदि नोटिस खुला है, तो उसे बंद कर दें ताकि मोबाइल स्टाइल में खुले
+                 if (floatingNotice.classList.contains('show-notice')) {
+                     floatingNotice.classList.remove('show-notice');
+                     // फिर से ओपन बटन दिखा दें
+                     openBtn.style.display = 'block';
+                 }
+             } else {
+                 // डेस्कटॉप साइज़ पर, यदि खुला है, तो पैडिंग ठीक करें
+                 if (floatingNotice.classList.contains('show-notice')) {
+                     body.style.paddingLeft = `${NOTICE_WIDTH + 15}px`;
+                 } else {
+                     body.style.paddingLeft = '15px';
+                 }
              }
         });
     </script>
