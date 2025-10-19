@@ -103,8 +103,8 @@
             display: flex;
             justify-content: center;
             gap: 40px;
-            margin-top: 20px;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .detail-item {
@@ -202,75 +202,6 @@
         #open-notice-btn i {
             margin-right: 5px;
         }
-
-        /* **मोबाइल उपकरणों के लिए मीडिया क्वेरी (900px से कम)** */
-        @media (max-width: 900px) {
-            
-            /* डेस्कटॉप पैडिंग हटाएं */
-            body {
-                padding-left: 0 !important; 
-            }
-            
-            /* नोटिस बोर्ड को नीचे से ऊपर स्लाइड करने के लिए तैयार करें */
-            #floating-notice {
-                width: 100%; /* पूरी चौड़ाई */
-                height: auto;
-                max-height: 80vh; /* अधिकतम ऊंचाई सेट करें */
-                top: auto; 
-                bottom: -80vh; /* स्क्रीन के नीचे छिपाएँ */
-                left: 0; 
-                transform: none; 
-                border-radius: 8px 8px 0 0; /* केवल ऊपर के कोनों को गोल करें */
-                border-left: none;
-                border-right: none;
-                box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
-            }
-            
-            /* JS द्वारा जोड़ी जाने वाली क्लास (मोबाइल के लिए) */
-            .show-notice {
-                bottom: 0 !important; /* इसे ऊपर स्लाइड करें */
-                left: 0 !important;
-                box-shadow: 0 -8px 20px rgba(255, 215, 0, 0.9);
-            }
-            
-            /* ओपन नोटिस बटन को नीचे दाईं ओर सेट करें */
-            #open-notice-btn {
-                top: auto; 
-                bottom: 20px; 
-                left: auto;
-                right: 20px; /* दाईं ओर फ़्लोट */
-                transform: none; 
-                border-radius: 50px; /* गोल बटन */
-                padding: 15px 20px;
-                font-size: 1.1em;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-                display: block !important; /* सुनिश्चित करें कि यह दिखाई दे */
-            }
-            
-            /* बाकी मोबाइल नियम */
-            .header-image {
-                height: 250px; 
-            }
-            header h1 {
-                font-size: 2.5em;
-            }
-             .video-container {
-                 max-width: 90%; 
-                 height: 350px; 
-            }
-            .photo-column {
-                grid-template-columns: 1fr; 
-                gap: 30px; 
-            }
-            .cool-button {
-                font-size: 1.3em;
-                min-width: 90%;
-            }
-            .qr-container {
-                width: 180px; 
-                height: 180px; 
-            }
-        }
         
         .mantra {
             background-color: #800020; 
@@ -352,9 +283,9 @@
         }
 
         .cool-button {
-            display: flex; /* Flexbox का उपयोग करें */
-            align-items: center; /* आइकन और टेक्स्ट को बीच में करें */
-            justify-content: center; /* सामग्री को केंद्र में करें */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
             padding: 18px 35px; 
             color: #FFFFFF; 
             text-decoration: none; 
@@ -372,8 +303,8 @@
 
         /* बटन के अंदर आइकन के लिए स्टाइलिंग */
         .cool-button i {
-            margin-right: 10px; /* आइकन और टेक्स्ट के बीच थोड़ी दूरी */
-            font-size: 1.2em; /* आइकन को थोड़ा बड़ा करें */
+            margin-right: 10px; 
+            font-size: 1.2em; 
         }
 
 
@@ -544,9 +475,9 @@
         }
 
         .upi-button {
-            display: flex; /* Flexbox का उपयोग करें */
-            align-items: center; /* आइकन और टेक्स्ट को बीच में करें */
-            justify-content: center; /* सामग्री को केंद्र में करें */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
             width: 100%;
             padding: 18px 20px;
             background-color: #800020; 
@@ -574,10 +505,10 @@
         }
         
         .upi-button:hover i {
-            color: #800020; /* माउस ओवर पर आइकन का रंग बदलें */
+            color: #800020; 
         }
         
-        /* मुख्य सामग्री और गैलरी */
+        /* **मुख्य सामग्री और गैलरी (डेस्कटॉप साइज़िंग)** */
         main {
             padding: 50px 20px;
             background-color: #F8F8FF;
@@ -599,7 +530,7 @@
             max-width: 1100px; 
             margin: 0 auto; 
             display: grid; 
-            grid-template-columns: 1fr 1fr; 
+            grid-template-columns: 1fr 1fr; /* डेस्कटॉप 2-कॉलम */
             gap: 40px; 
         }
 
@@ -610,6 +541,9 @@
             border-radius: 8px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
         .photo-column div:hover {
@@ -619,8 +553,11 @@
 
         .photo-column img {
             width: 100%; 
+            /* **डेस्कटॉप फिक्स: अच्छी फिक्स्ड हाइट** */
             height: 380px; 
             object-fit: cover; 
+            display: block; 
+            
             border: 6px solid #800020; 
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
             transition: opacity 0.5s ease;
@@ -663,6 +600,84 @@
             font-size: 1em;
             margin-top: 5px;
             font-weight: bold;
+        }
+        
+        /* **मोबाइल उपकरणों के लिए मीडिया क्वेरी (900px से कम)** */
+        @media (max-width: 900px) {
+            
+            /* डेस्कटॉप पैडिंग हटाएं */
+            body {
+                padding-left: 0 !important; 
+            }
+            
+            /* नोटिस बोर्ड को नीचे से ऊपर स्लाइड करने के लिए तैयार करें */
+            #floating-notice {
+                width: 100%; 
+                height: auto;
+                max-height: 80vh; 
+                top: auto; 
+                bottom: -80vh; 
+                left: 0; 
+                transform: none; 
+                border-radius: 8px 8px 0 0; 
+                border-left: none;
+                border-right: none;
+                box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
+            }
+            
+            /* JS द्वारा जोड़ी जाने वाली क्लास (मोबाइल के लिए) */
+            .show-notice {
+                bottom: 0 !important; 
+                left: 0 !important;
+                box-shadow: 0 -8px 20px rgba(255, 215, 0, 0.9);
+            }
+            
+            /* ओपन नोटिस बटन को नीचे दाईं ओर सेट करें */
+            #open-notice-btn {
+                top: auto; 
+                bottom: 20px; 
+                left: auto;
+                right: 20px; 
+                transform: none; 
+                border-radius: 50px; 
+                padding: 15px 20px;
+                font-size: 1.1em;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+                display: block !important; 
+            }
+            
+            /* बाकी मोबाइल नियम */
+            .header-image {
+                height: 250px; 
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+             .video-container {
+                 max-width: 90%; 
+                 height: 350px; 
+            }
+            
+            .photo-column {
+                grid-template-columns: 1fr; /* मोबाइल 1-कॉलम */
+                gap: 30px; 
+            }
+            
+             .photo-column img {
+                /* **मोबाइल फिक्स:** */
+                height: 250px; /* मोबाइल पर छोटी हाइट */
+                aspect-ratio: 3 / 4; /* चौड़ाई और लम्बाई का अनुपात */
+                object-fit: cover; /* इमेज को पूरी तरह से फ़िट करे */
+            }
+            
+            .cool-button {
+                font-size: 1.3em;
+                min-width: 90%;
+            }
+            .qr-container {
+                width: 180px; 
+                height: 180px; 
+            }
         }
         
     </style>
